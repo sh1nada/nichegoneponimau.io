@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+</head>
+
+<body>
+
+<script language="JavaScript" type="text/javascript">
+var current=1;
+var kolvo=5; //количество картинок
+// массив картинок
+tumb= new Array();
+tumb[0]=new Image(); // картинка 1
+tumb[1]=new Image(); // картинка 2
+tumb[2]=new Image(); // картинка 3
+tumb[3]=new Image(); // картинка 4
+tumb[4]=new Image(); // картинка 5
+
+tumb[0].src="https://sun9-68.userapi.com/c849416/v849416223/11a195/obwxVdBmU18.jpg"
+tumb[1].src="https://img02.rl0.ru/afisha/750x750/daily.afisha.ru/uploads/images/1/b8/1b82c89c4621385f012cc553b7ab7ece.jpg"
+tumb[2].src="https://24.img.avito.st/640x480/8003363824.jpg"
+tumb[3].src="https://i.pinimg.com/originals/c9/1c/35/c91c3598eab3ddaf28379c2a91f5ff72.jpg"
+tumb[4].src="https://avatars.mds.yandex.net/get-zen_doc/1583807/pub_5d6bed91c7e50c00b33d695f_5d6d016135c8d800add16bbd/scale_1200"
+
+function frw(){
+if (current < kolvo) {
+current++;
+document.images['r'].src=tumb[current-1].src;
+}
+}
+function bck(){
+if (current > 1) {
+current--;
+document.images['r'].src=tumb[current-1].src;
+}
+}
+
+</script>
+
+<table cellspacing="4" cellpadding="0" border="1">
+<tr>
+<td>
+<img width="1250" height="850" src="1.jpeg" name="r">
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" value="Назад" onClick="bck()">
+<input type="button" value="Вперед" onClick="frw()">
+</td>
+</tr>
+</table>
+
+</body>
+</html>
